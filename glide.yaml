@@ -1,0 +1,6 @@
+package: github.com/wuriyanto48/go-oauth2-jwt
+import:
+- package: github.com/dgrijalva/jwt-go
+  version: v3.0.0
+- package: github.com/gorilla/mux
+  version: v1.4.0
