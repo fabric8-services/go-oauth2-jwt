@@ -19,7 +19,8 @@ JSON Web Tokens (JWT) are an approach to authentication that provide a way for c
  |        |               & Refresh Token                        |               |
  |        |                 HTTP 200 OK                          |               |         
  |        |               {Token: `..JWT..`,                     |               |
- |        |                Refresh: `..JWT`}                     |               |                     |        |                                                      |               |          
+ |        |                Refresh: `..JWT`}                     |               |                    
+ |        |                                                      |               |          
  |        |                                  +--------------+    |               |
  |        |--(C)-- Access Token ------------>|   Resource   |    |               |
  |        |        GET /api/resource         |    Server    |    |               |
@@ -36,12 +37,17 @@ JSON Web Tokens (JWT) are an approach to authentication that provide a way for c
 
 The flow illustrated in Figure includes the following steps:
 
-  (A)  The client requests an access token by authenticating with the authorization server and presenting an authorization grant.
-  (B)  The authorization server authenticates the client and validates the authorization grant, and if valid, issues an access token and a refresh token.
-  (C)  The client makes a protected resource request to the resource server by presenting the access token.
-  (D)  The resource server validates the access token, and if valid, serves the request.
-  (E)  The client requests a new access token by authenticating with  the authorization server and presenting the refresh token.  The client authentication requirements are based on the client type and on the authorization server policies.
-  (F)  The authorization server authenticates the client and validates the refresh token, and if valid, issues a new access token.
+- (A)  The client requests an access token by authenticating with the authorization server and presenting an authorization 
+grant.
+- (B)  The authorization server authenticates the client and validates the authorization grant, and if valid, issues an 
+access 
+token and a refresh token.
+- (C)  The client makes a protected resource request to the resource server by presenting the access token.
+- (D)  The resource server validates the access token, and if valid, serves the request.
+- (E)  The client requests a new access token by authenticating with  the authorization server and presenting the refresh 
+token.  The client authentication requirements are based on the client type and on the authorization server policies.
+- (F)  The authorization server authenticates the client and validates the refresh token, and if valid, issues a new access 
+token.
 
 ## Get Started
 
@@ -52,14 +58,14 @@ You need to have following packages in place:
 * `git`
 * `make`
 * `go` (`>= v1.10.2`)
-* link:https://github.com/Masterminds/glide[`glide`] for dependency management
+* [`glide`](https://github.com/Masterminds/glide) for dependency management
 
-Assuming that you have all the link:https://golang.org/doc/install[Golang prerequisites] in place (such as `$GOPATH`), clone the repository first:
+Assuming that you have all the [Golang prerequisites](https://golang.org/doc/install) in place (such as `$GOPATH`), clone the repository first:
 
-[source,bash]
-----
+
+```language: shell
 $ git clone https://github.com/fabric8-services/go-oauth2-jwt $GOPATH/src/github.com/fabric8-services/go-oauth2-jwt
-----
+```
 
 ### Install and execute
 
@@ -69,8 +75,9 @@ Execute make target `install` for installing the dependencies.
   ```
 
 after this step, you can do this:
-- go run server.go
-
+```language: shell
+go run server.go
+```
 try it with curl:
 
 ```language:shell
