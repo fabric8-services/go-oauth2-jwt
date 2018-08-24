@@ -1,4 +1,4 @@
-package: github.com/wuriyanto48/go-oauth2-jwt
+package: github.com/hemanik/go-oauth2-jwt
 import:
 - package: github.com/dgrijalva/jwt-go
   version: v3.0.0
